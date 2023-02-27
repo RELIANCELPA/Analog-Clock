@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RAB JANE</title>
+	<style type="text/css">
+		.first{
+			height: 500px;
+			width: 1000px;
+			border: 5px solid black;
+			margin:auto;
+			position: relative;
+			background-color: skyblue;
+		}
+		.second{
+				text-align: center;
+				border: 2px dotted black;
+				font-size: 40px;
+				background-color:rgb(99, 194, 218);
+				}
+
+
+		.third{
+			position: absolute;
+			top: 100px;
+			left:200px;
+			font-size: 25px;
+
+		}
+		.four{
+
+			position: absolute;
+			top: 130px;
+			left:250px;
+			font-size: 25px;
+
+		}
+		.five{
+
+			position: absolute;
+			top: 200px;
+			left:200px;
+			font-size: 25px;
+			text-transform: uppercase;
+
+		}
+		.six{
+
+			position: absolute;
+			top: 230px;
+			left:257px;
+			font-size: 25px;
+
+		}
+		.seven{
+			position: absolute;
+			top: 300px;
+			left: 200px;
+			font-size: 30px;
+			cursor: pointer;
+
+		}
+		.eight{
+			position: absolute;
+			top: 300px;
+			left: 350px;
+			font-size: 30px;
+			cursor: pointer;
+
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<fieldset class="first">
+			<legend class="second">LOGIN FORM</legend>
+			<div>
+				<label class="third">USER NAME</label>
+				<input type="text" name="" class="four" />
+				<div class="clear"></div>
+			</div>
+			<div>
+				<label class="five">Password</label>
+				<input type="password" name="" id="password" class="six" /> 
+				<div class="clear"></div>
+			</div>
+			<div>
+				<button type="button" class="seven">LOGIN</button>
+				<button type="button" class="eight" onclick="toggle(this)" >
+				SHOW PASSWORD</button>
+			</div>
+		</fieldset>
+	</form>
+	<script type="text/javascript">
+		//object bnao pehle 
+		//bhar lene se globaly ho jata h
+		var password = document.getElementById("password");
+		function toggle(elem) {
+			var type = password.getAttribute('type');
+			if (type === 'password') {
+			password.setAttribute('type','text');
+			elem.innerText = 'HIDE PASSWORD';}
+			else{
+				password.setAttribute('type', 'password');
+				elem.innerText = 'SHOW PASSWORD';
+			}
+
+			
+
+		
+		}
+	</script>
+
+</body>
+</html>
